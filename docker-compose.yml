@@ -1,0 +1,16 @@
+services:
+  mock_api:
+    image: mock-api:latest
+    container_name: mock-api
+    build:
+      context: ./mountebank
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./mountebank/imposters:/imposters
+    ports:
+      - 2525:2525
+      - 8090:8090
+      - 8091:8091
+      - 4000:4000
+    command: --configfile /imposters/imposters.ejs --allowInjection
+    
