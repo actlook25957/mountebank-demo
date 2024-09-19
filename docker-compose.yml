@@ -1,5 +1,5 @@
 services:
-  mock_api:
+  mock-api:
     image: mock-api:latest
     container_name: mock-api
     build:
