@@ -5,12 +5,8 @@
         {
             "predicates": [
                 {
-                    "deepEquals": {
-                        "method": "GET"
-                    }
-                },
-                {
-                    "deepEquals": {
+                    "equals": {
+                        "method": "GET",
                         "path": "/test"
                     }
                 }
